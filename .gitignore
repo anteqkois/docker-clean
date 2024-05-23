@@ -7,4 +7,4 @@ backup_*
 coverage/
 .env.prod.build
 yarn.lock
-.env
+# .env

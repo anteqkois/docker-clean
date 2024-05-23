@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: app:latest
+    volumes:
+      - ./.env:/app/.env
+    ports:
+      - 3001:3001
+    environment:
+      NODE_ENV: "production"
+      TEST_2: TEST_2
+    restart: on-failure
