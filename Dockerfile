@@ -12,8 +12,8 @@ COPY . .
 
 RUN npx tsc
 
-CMD ["node", "./build/index.js"]
+# CMD ["node", "./build/index.js"]
 
-# RUN chmod +x ./entry.sh
-# 
-# ENTRYPOINT ["./entry.sh"]
+RUN chmod +x ./entry.sh
+
+ENTRYPOINT ["./entry.sh"]
